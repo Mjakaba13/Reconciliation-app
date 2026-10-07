@@ -36,7 +36,7 @@ nav button.on{color:var(--ink);border-top-color:var(--acc);font-weight:600}
 <script>
 const KEY="linerec.v2",OLD="linerec.v1";
 const M=[["pole","Pole","pcs"],["xarm","Cross arm","pcs"],["pin","Pin insulator","pcs"],["strain","Strain insulator","pcs"],["stay","Stay set","sets"],["earth","Earth rod","pcs"]];
-const T=[["int","Intermediate pole",{pole:1,xarm:1,pin:3}],["light","Light angle pole",{pole:1,xarm:1,pin:3,stay:1}],["heavy","Heavy angle pole",{pole:2,xarm:2,strain:6,stay:2}],["dead","Dead-end pole",{pole:1,xarm:1,strain:3,stay:1}],["tee","Tee-off pole",{pole:1,xarm:2,pin:3,strain:3,stay:1}]];
+const T=[["int","Intermediate pole",{pole:1,xarm:1,pin:3}],["light","Light angle pole",{pole:1,xarm:1,pin:3,stay:1}],["heavy","Heavy angle pole",{pole:2,xarm:2,strain:6,stay:2}],["terminal","Terminal pole",{pole:1,xarm:1,strain:3,stay:1}],["tee","Tee-off pole",{pole:1,xarm:2,pin:3,strain:3,stay:1}]];
 const today=()=>new Date().toISOString().slice(0,10);
 const clone=o=>JSON.parse(JSON.stringify(o));
 function newJob(from){const b=from||{mats:M.map(m=>({id:m[0],name:m[1],unit:m[2]})),types:T.map(t=>({id:t[0],name:t[1],bom:{...t[2]}}))};
